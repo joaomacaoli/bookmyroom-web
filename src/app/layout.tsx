@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import "./globals.css";
+
+export const metadata: Metadata = {
+  title: {
+    template: "%s | Book My Room",
+    default: "Book My Room"
+  }
+};
 
 export default function RootLayout({
   children,
@@ -6,10 +14,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`antialiased`}>
-        {children}
-      </body>
+    <html lang="pt">
+      <body className="antialiased">{children}</body>
     </html>
   );
 }
