@@ -1,24 +1,26 @@
+import Link from "next/link";
+
+const menu = [
+  { title: "Início", href: "/" },
+  { title: "Salas", href: "/rooms" },
+  { title: "Agendamentos", href: "/appointments" },
+]
+
 export default function Navbar() {
   return (
     <header className="bg-blue-600 text-white p-4 flex justify-between items-center">
-      <h1 className="text-xl font-bold">Book My Room</h1>
+      <h1 className="text-xl font-bold">
+        <Link href="/">Book My Room</Link>
+      </h1>
       <nav>
         <ul className="flex gap-4">
-          <li>
-            <a href="#" className="hover:underline">
-              Início
-            </a>
-          </li>
-          <li>
-            <a href="#" className="hover:underline">
-              Salas
-            </a>
-          </li>
-          <li>
-            <a href="#" className="hover:underline">
-              Agendamentos
-            </a>
-          </li>
+          {menu.map(menu => (
+            <li key={menu.title}>
+              <Link href={menu.href}>
+                {menu.title}
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </header>
