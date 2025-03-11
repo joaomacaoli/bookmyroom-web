@@ -8,7 +8,7 @@ const menu = [
 
 export default function Navbar() {
   return (
-    <header className="bg-blue-600 text-white p-4 flex justify-between items-center">
+    <header className="bg-gray-800 text-white p-4 flex justify-between items-center">
       <h1 className="text-xl font-bold">
         <Link href="/">Book My Room</Link>
       </h1>
