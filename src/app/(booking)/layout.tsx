@@ -9,7 +9,9 @@ export default function BookingLayout({ children }: { children: React.ReactNode 
 
       <div className="flex flex-1">
         <Sidebar />
-        <main className="flex-1 p-4">{children}</main>
+        <main className="flex-1 p-4 overflow-y-auto">
+          {children}
+        </main>
       </div>
 
       <Footer />

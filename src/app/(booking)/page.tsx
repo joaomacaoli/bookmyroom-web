@@ -2,9 +2,11 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen">
+    <div className="flex flex-col items-center justify-center h-full">
       <h1 className="text-4xl font-bold mb-4">Bem-vindo ao Book My Room</h1>
-      <p className="text-lg text-gray-700">Gerencie salas e agendamentos de forma simples e eficiente.</p>
+      <p className="text-lg text-gray-700">
+        Gerencie salas e agendamentos de forma simples e eficiente.
+      </p>
 
       <div className="mt-6 flex gap-4">
         <Link href="/rooms">
