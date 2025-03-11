@@ -3,19 +3,42 @@
 import * as ReactDOM from 'react-dom';
 import * as React from 'react';
 import { useEffect, useRef } from 'react';
-import { ScheduleComponent, ViewsDirective, ViewDirective, TimelineViews, Inject, EventRenderedArgs, ResourcesDirective, ResourceDirective, ResourceDetails, ActionEventArgs, RenderCellEventArgs, PopupOpenEventArgs, Resize, DragAndDrop } from '@syncfusion/ej2-react-schedule';
-import './styles.css';
 import { extend, isNullOrUndefined } from '@syncfusion/ej2-base';
-// import * as dataSource from './datasource.json';
-import { timelineResourceData } from './datasource';
+import './styles.css';
+import dataSource from './datasource.json';
+// import { timelineResourceData } from './datasource';
+
+import {
+  ScheduleComponent,
+  ViewsDirective,
+  ViewDirective,
+  TimelineViews,
+  Inject,
+  EventRenderedArgs,
+  ResourcesDirective,
+  ResourceDirective,
+  ResourceDetails,
+  ActionEventArgs,
+  RenderCellEventArgs,
+  PopupOpenEventArgs,
+  Resize,
+  DragAndDrop
+} from '@syncfusion/ej2-react-schedule';
+
 
 /**
  * schedule room scheduler sample
  */
 
 export default function RoomScheduler() {
-  const data: Record<string, any>[] = extend([], (timelineResourceData as Record<string, any>).roomData, {}, true) as Record<string, any>[];
+  const data: Record<string, any>[] = extend(
+    [], (
+      dataSource as Record<string, any>
+    ).roomData, {}, true
+  ) as Record<string, any>[];
+
   let scheduleObj = useRef<ScheduleComponent | null>(null);
+
   const ownerData: Record<string, any>[] = [
     { text: 'Jammy', id: 1, color: '#ea7a57', capacity: 20, type: 'Conference' },
     { text: 'Tweety', id: 2, color: '#7fa900', capacity: 7, type: 'Cabin' },
@@ -42,7 +65,7 @@ export default function RoomScheduler() {
   }
 
   const isReadOnly = (endDate: Date): boolean => {
-    return (endDate < new Date(2021, 6, 31, 0, 0));
+    return (endDate < new Date(2025, 2, 11, 0, 0));
   }
 
   const resourceHeaderTemplate = (props: ResourceDetails) => {
@@ -74,7 +97,7 @@ export default function RoomScheduler() {
 
   const onRenderCell = (args: RenderCellEventArgs): void => {
     if (args.element.classList.contains('e-work-cells')) {
-      if ((args.date ?? new Date()) < new Date(2021, 6, 31, 0, 0)) {
+      if ((args.date ?? new Date()) < new Date(2025, 2, 11, 0, 0)) {
         args.element.setAttribute('aria-readonly', 'true');
         args.element.classList.add('e-read-only-cells');
       }
@@ -128,7 +151,7 @@ export default function RoomScheduler() {
             ref={scheduleObj}
             width='100%'
             height='650px'
-            selectedDate={new Date(2021, 7, 2)}
+            selectedDate={new Date(2025, 2, 11)}
             workHours={{ start: '08:00', end: '18:00' }}
             timeScale={{ interval: 30, slotCount: 1 }}
             resourceHeaderTemplate={resourceHeaderTemplate}
