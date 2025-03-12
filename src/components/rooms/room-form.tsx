@@ -50,6 +50,7 @@ export function RoomForm({ initialData, onSubmit }: RoomFormProps) {
           value={capacity}
           onChange={(e) => setCapacity(Number(e.target.value))}
           className="w-full p-2 border rounded"
+          min={1}
           required
         />
       </div>
