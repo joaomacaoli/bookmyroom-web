@@ -1,4 +1,4 @@
-'use client'
+use client";
 
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons';
 import { useSchedule } from '@/contexts/schedule-context';

@@ -1,4 +1,4 @@
-'use client'
+use client";
 
 import { useSchedule } from '@/contexts/schedule-context';
 

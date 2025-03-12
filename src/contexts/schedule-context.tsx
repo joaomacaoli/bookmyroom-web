@@ -1,4 +1,4 @@
-'use client';
+use client";;
 
 import { createContext, useContext, useRef, RefObject } from 'react';
 import { ScheduleComponent } from '@syncfusion/ej2-react-schedule';
