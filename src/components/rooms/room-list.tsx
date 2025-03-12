@@ -1,4 +1,4 @@
-import { RoomListProps } from "@/app/types/room";
+import { RoomListProps } from "@/types/room";
 import RoomItem from "./room-item";
 
 export default function RoomList({ rooms }: RoomListProps) {

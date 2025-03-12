@@ -1,4 +1,4 @@
-import { Room } from "@/app/types/room";
+import { Room } from "@/types/room";
 import RoomList from "@/components/rooms/room-list";
 import { Plus } from "lucide-react";
 import Link from "next/link";

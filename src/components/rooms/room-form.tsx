@@ -1,6 +1,6 @@
 "use client";
 
-import { Room } from "@/app/types/room";
+import { Room } from "@/types/room";
 import { useState } from "react";
 
 interface RoomFormProps {
