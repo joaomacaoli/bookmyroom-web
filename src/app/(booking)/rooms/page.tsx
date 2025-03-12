@@ -1,40 +1,19 @@
-import { Room } from "@/types/room";
-import RoomList from "@/components/rooms/room-list";
+"use client";
+
+import { useEffect, useState } from "react";
 import { Plus } from "lucide-react";
 import Link from "next/link";
 
-const mockRooms: Room[] = [
-  {
-    id: "1",
-    description: "Sala de Reunião A",
-    floor: "1º Andar",
-    capacity: 10,
-    status: "active",
-  },
-  {
-    id: "2",
-    description: "Sala de Treinamento",
-    floor: "2º Andar",
-    capacity: 20,
-    status: "inactive",
-  },
-  {
-    id: "3",
-    description: "Sala de Conferência",
-    floor: "3º Andar",
-    capacity: 50,
-    status: "maintenance",
-  },
-  {
-    id: "4",
-    description: "Auditório",
-    floor: "Térreo",
-    capacity: 100,
-    status: "inactive",
-  },
-];
+import RoomList from "@/components/rooms/room-list";
+import { mockRooms } from "@/mocks/mock-room";
 
 export default function RoomsPage() {
+  const [rooms, setRooms] = useState<null | typeof mockRooms>(null);
+
+  useEffect(() => {
+    setRooms([...mockRooms]);
+  }, [mockRooms.length]);
+
   return (
     <div className="p-6 max-w-4xl mx-auto">
       <div className="flex justify-between items-center mb-4">
@@ -44,7 +23,7 @@ export default function RoomsPage() {
         </Link>
       </div>
 
-      <RoomList rooms={mockRooms} />
+      {rooms ? <RoomList rooms={rooms} /> : <p>Carregando...</p>}
     </div>
   );
 }

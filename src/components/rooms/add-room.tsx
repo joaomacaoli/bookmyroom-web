@@ -2,11 +2,16 @@
 
 import { RoomForm } from "@/components/rooms/room-form";
 import FormBackButton from "../commom/form-back-button";
+import { addRoom } from "@/mocks/mock-room";
+import { useRouter } from "next/navigation";
 
 export default function AddRoomPage() {
+  const router = useRouter();
+
   const handleSubmit = (data: any) => {
-    console.log("Nova sala:", data);
+    addRoom(data);
     // todo API
+    router.push("/rooms");
   };
 
   return (
