@@ -1,9 +1,10 @@
 import Link from "next/link";
 
 const menu = [
-  { title: "Início", href: "/" },
+  { title: "Dashboard", href: "/dashboard" },
   { title: "Salas", href: "/rooms" },
   { title: "Agendamentos", href: "/appointments" },
+  { title: "Logout", href: "/" },
 ]
 
 export default function Navbar() {

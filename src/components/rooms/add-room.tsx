@@ -1,7 +1,7 @@
 "use client";
 
 import { RoomForm } from "@/components/rooms/room-form";
-import FormBackButton from "../commom/form-back-button";
+import FormBackButton from "../common/buttons/form-back-button";
 import { addRoom } from "@/mocks/mock-room";
 import { useRouter } from "next/navigation";
 

@@ -1,6 +1,6 @@
-import Footer from "@/components/footer";
-import Navbar from "@/components/navbar";
-import Sidebar from "@/components/sidebar";
+import Footer from "@/components/common/footer";
+import Navbar from "@/components/common/navbar";
+import Sidebar from "@/components/common/sidebar";
 
 export default function BookingLayout({ children }: { children: React.ReactNode }) {
   return (

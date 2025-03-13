@@ -1,4 +1,4 @@
-import Footer from "@/components/footer";
+import Footer from "@/components/common/footer";
 import ContactLandingPage from "@/components/landing-page/contact";
 import FeaturesLandingPage from "@/components/landing-page/features";
 import HeaderLandingPage from "@/components/landing-page/header";
