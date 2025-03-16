@@ -19,7 +19,7 @@ export default function ContactLandingPage() {
           ></textarea>
           <button
             type="submit"
-            className="mt-4 bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition duration-300"
+            className="mt-4 bg-blue-300 text-blue-600 px-6 py-3 rounded-lg hover:bg-blue-400 hover:text-white transition duration-300"
           >
             Enviar Mensagem
           </button>

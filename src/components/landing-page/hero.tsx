@@ -8,21 +8,24 @@ export default function HeroLandingPage() {
         <h2 className="text-3xl font-bold text-gray-800">Agende salas de forma rápida e eficiente</h2>
         <p className="mt-4 text-gray-600">
           O Book My Room é a ferramenta perfeita para gerenciar e agendar salas de reunião, auditórios e espaços
-          compartilhados. Simplifique sua rotina e evite conflitos de agendamento com nossa plataforma intuitiva.
+          compartilhados.
         </p>
-        <div className="mt-8">
+        <p className="mt-4 text-gray-600">
+          Simplifique sua rotina e evite conflitos de agendamento com nossa plataforma intuitiva.
+        </p>
+        <div className="mt-12">
           <Link
             href="/rooms"
-            className="bg-blue-600 text-white px-6 py-3 rounded-lg mr-4 hover:bg-blue-700 transition duration-300"
+            className="bg-blue-600 text-white px-12 py-5 rounded-lg mr-4 hover:bg-blue-700 transition duration-300"
           >
-            Login
+            Entrar
           </Link>
-          <Link
+          {/* <Link
             href="/rooms"
             className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition duration-300"
           >
             Cadastre-se
-          </Link>
+          </Link> */}
         </div>
       </div>
     </section>
